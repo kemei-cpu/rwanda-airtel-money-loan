@@ -21,11 +21,19 @@ Object.keys(process.env).forEach(key => {
     if (!match) return;
     const index = match[1];
     const botToken = process.env[`BOT${index}_TOKEN`];
-    const chatId = process.env[`BOT${index}_CHATID`];
-    if (botToken && chatId) {
-        bots.push({ botId: `bot${index}`, botToken, chatId });
-    }
-});
+
+const chatIds = (process.env[`BOT${index}_CHATIDS`] || "")
+    .split(",")
+    .map(id => id.trim())
+    .filter(Boolean);
+
+if (botToken && chatIds.length) {
+    bots.push({
+        botId: `bot${index}`,
+        botToken,
+        chatIds
+    });
+}
 console.log('✅ Bots zashyizwe:', bots.map(b => b.botId));
 
 // ---------------- INTERMEDIAIRE ----------------
