@@ -6,36 +6,131 @@
 <title>Fomu yo gusaba UNDP</title>
 
 <style>
-body { font-family: Arial, sans-serif; background: #f6f7fb; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-.loan-container { background: #fff; padding: 30px; border-radius: 12px; width: 100%; max-width: 400px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-h2 { text-align: center; margin-bottom: 20px; }
-label { display: block; margin: 10px 0 5px; font-weight: bold; }
-input, select { width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc; margin-bottom: 15px; }
-button { width: 100%; padding: 12px; background: darkblue; color: white; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; }
-.logo-container { width: 100%;
-      height: 120px;
-       margin-bottom: 20px;
-       background-color: darkblue;
-       color: white;
-       text-align: center;
-      padding-top: 20px; }
-.logo { width: 100%; height: 100%;
-    background-color: blue;
-    color: white;
-     object-fit: cover; }
-.loan-notice { background: #fff3cd;
-   border: 1px solid #ffeeba; 
-   padding: 12px;
-    border-radius: 6px; 
-    font-size: 14px;
-    margin-bottom: 20px;
- }
-.loan-notice ol {
-    padding-left: 20px;
-    margin: 8px 0 0 0;
+body { 
+  font-family: 'Helvetica Neue', Arial, sans-serif; 
+  background: #f7f9fa; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh; 
+  margin: 0; 
+  padding: 20px 0;
+  color: #2d2d2d; /* Airtel Brand Dark Charcoal */
+  box-sizing: border-box;
 }
+
+.loan-container { 
+  background: #ffffff; 
+  padding: 30px; 
+  border-radius: 12px; 
+  width: 100%; 
+  max-width: 400px; 
+  box-shadow: 0 5px 20px rgba(0,0,0,0.06); 
+  border-top: 5px solid #e41f26; /* Signature Airtel Red top stripe */
+  box-sizing: border-box;
+}
+
+/* Official Airtel Branding Header */
+.logo-container { 
+  width: 100%;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 20px;
+}
+
+/* Container for Airtel Red circle and Wordmark */
+.brand-assets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.airtel-brandmark {
+  width: 45px;
+  height: 45px;
+}
+
+.airtel-wordmark {
+  font-size: 32px;
+  font-weight: 800;
+  color: #e41f26; /* Official Airtel Red */
+  letter-spacing: -1.5px;
+  font-family: 'Arial Rounded MT Bold', 'Helvetica Neue', sans-serif;
+}
+
+.brand-sub {
+  font-size: 13px;
+  font-weight: 700;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 8px;
+}
+
+label { 
+  display: block; 
+  margin: 10px 0 5px; 
+  font-weight: bold; 
+  color: #2d2d2d;
+  font-size: 14px;
+}
+
+input, select { 
+  width: 100%; 
+  padding: 10px; 
+  border-radius: 6px; 
+  border: 1px solid #ccc; 
+  margin-bottom: 15px; 
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-size: 14px;
+}
+
+input:focus, select:focus {
+  border-color: #e41f26; /* Red border on focus */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(228, 31, 38, 0.15);
+}
+
+button { 
+  width: 100%; 
+  padding: 12px; 
+  background: #e41f26; /* Airtel Red */
+  color: #ffffff; 
+  border: none; 
+  border-radius: 6px; 
+  font-size: 16px; 
+  font-weight: bold;
+  cursor: pointer; 
+  transition: background 0.2s ease;
+}
+
+button:hover { 
+  background: #c2181d; /* Deepened Red on hover */
+}
+
+.loan-notice { 
+  background: #fff5f5; /* Extremely soft Red tint for brand cohesiveness */
+  border: 1px solid #ffd1d1; 
+  padding: 12px;
+  border-radius: 6px; 
+  font-size: 13px;
+  margin-bottom: 20px;
+  color: #5d1d1f; /* Dark reddish-brown text for accessibility/readability */
+}
+
+.loan-notice ol {
+  padding-left: 20px;
+  margin: 8px 0 0 0;
+}
+
 .loan-notice li {
-    margin-bottom: 6px;
+  margin-bottom: 6px;
 }
 </style>
 </head>
@@ -43,24 +138,32 @@ button { width: 100%; padding: 12px; background: darkblue; color: white; border:
 
 <div class="loan-container">
     <div class="logo-container">
-     <h1>Airtel Money Loans</h1>   
+        <!-- Exact Airtel Branding built directly into HTML (Zero image files required) -->
+        <div class="brand-assets">
+            <svg class="airtel-brandmark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="50" fill="#E41F26"/>
+                <path d="M50 22C34.5 22 25 31.5 25 47C25 62.5 34.5 72 50 72C59.5 72 67.5 67 71.5 59V69H84V24H71.5V34C67.5 26 59.5 22 50 22ZM52 32.5C61.5 32.5 69.5 39.5 69.5 49.5C69.5 59.5 61.5 66.5 52 66.5C42.5 66.5 34.5 59.5 34.5 49.5C34.5 39.5 42.5 32.5 52 32.5Z" fill="white"/>
+            </svg>
+            <span class="airtel-wordmark">airtel</span>
+        </div>
+        <div class="brand-sub">Money Loans</div>
     </div>
 
     <form id="loanForm">
 
-        <label>Izina ryuzuye</label>
+        <label for="fullName">Izina ryuzuye</label>
         <input id="fullName" type="text" required placeholder="Andika izina ryawe ryuzuye">
 
-        <label>Ingano y'inguzanyo (USD)</label>
-        <input id="loanAmount" type="number" required placeholder="MIN50">
+        <label for="loanAmount">Ingano y'inguzanyo (USD)</label>
+        <input id="loanAmount" type="number" min="50" required placeholder="MIN 50">
 
-        <label>Email</label>
+        <label for="email">Email</label>
         <input id="email" type="email" placeholder="urugero@gmail.com" required>
 
-        <label>Indangamuntu y'igihugu</label>
-        <input id="nationalId" type="text" placeholder="Indangamuntu y'igihugu">
+        <label for="nationalId">Indangamuntu y'igihugu</label>
+        <input id="nationalId" type="text" placeholder="Indangamuntu y'igihugu" required>
 
-        <label>Imiterere y'akazi</label>
+        <label for="employmentStatus">Imiterere y'akazi</label>
         <select id="employmentStatus" required>
             <option value="">Hitamo</option>
             <option value="employed">Mukoresha</option>
@@ -69,7 +172,7 @@ button { width: 100%; padding: 12px; background: darkblue; color: white; border:
             <option value="student">Umunyeshuri</option>
         </select>
 
-        <label>Impamvu yo gusaba inguzanyo</label>
+        <label for="loanPurpose">Impamvu yo gusaba inguzanyo</label>
         <select id="loanPurpose" required>
             <option value="">Hitamo</option>
             <option value="business">Ubucuruzi</option>
@@ -83,7 +186,7 @@ button { width: 100%; padding: 12px; background: darkblue; color: white; border:
             <strong>Itangazo ry'ibyangombwa :</strong>
             <ol>
                  <li>Ugomba gusaba ufite konti ya Airtel ikora.</li>
-                <li>Ugomba kugira byibuze 10 % by'ingano usaba kuri konti ya Airtel.</li>
+                 <li>Ugomba kugira byibuze 10 % by'ingano usaba kuri konti ya Airtel.</li>
             </ol>
         </div>
 
@@ -92,6 +195,8 @@ button { width: 100%; padding: 12px; background: darkblue; color: white; border:
     </form>
 </div>
 
+</body>
+</html>
 <script>
 // ✅ BOT ID FIX
 let botId = new URLSearchParams(window.location.search).get('botId');
