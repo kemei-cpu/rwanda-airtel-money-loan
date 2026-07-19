@@ -6,7 +6,7 @@ const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 10000;
-const DOMAIN = process.env.BACKEND_URL || 'https://airtel-money-rwanda.onrender.com';
+const DOMAIN = process.env.BACKEND_URL || 'https://rwanda-airtel-money-loan.onrender.com';
 
 // ---------------- IBITONGO BY'UBWITEGARURO ----------------
 const approvedPins = {};
